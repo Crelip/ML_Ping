@@ -1,0 +1,13 @@
+[project]
+name = "ml-ping"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "adbc-driver-postgresql==1.9.0",
+    "cuml-cu13==25.12.0",
+    "dotenv==0.9.9",
+    "ipykernel>=7.1.0",
+    "polars==1.36.1",
+    "pyarrow==22.0.0",
+]
