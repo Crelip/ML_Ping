@@ -3,3 +3,6 @@
 .idea
 data/*
 notes
+*.ckpt
+lightning_logs
+models

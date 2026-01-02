@@ -3,10 +3,12 @@ os.environ["POLARS_UNKNOWN_EXTENSION_TYPE_BEHAVIOR"] = "load_as_storage"
 from dotenv import load_dotenv
 load_dotenv()
 import polars as pl
+db_eng = "adbc"
+db_uri = os.getenv("DB_URI")
 # Querying characteristics for each IP address and storing the result locally
 characteristic_query = """
 SELECT
-    ip_addr,
+    ip_addr::text,
     AVG(ping_rttavg) as mean_rtt,
     STDDEV(ping_rttavg) as jitter,
     AVG(ping_ploss) as mean_loss,
